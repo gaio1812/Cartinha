@@ -1,0 +1,171 @@
+:root {
+  --rosa-fundo: #ffe6f0;
+  --rosa-claro: #ff4da6;
+  --rosa-médio: #ff66a3;
+  --rosa-escuro: #cc0066;
+  --cinza: #cccccc;
+  --cinza-escuro: #333333;
+}
+
+body {
+  background-color: var(--rosa-fundo);
+  font-family: 'Dancing Script', cursive, Arial, sans-serif;
+  text-align: center;
+  padding: 5vh 5vw;
+  color: #99004d;
+  overflow-x: hidden;
+}
+
+/* ✅ Canvas vetorial no fundo */
+#chuvaCoracoesCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 🌙 Botão de alternância de tema */
+#botaoTema {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  background-color: #ffffff80;
+  backdrop-filter: blur(4px);
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+body[data-tema="escuro"] #botaoTema {
+  background-color: #33333380;
+  color: #f0f0f0;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 3em);
+  margin-bottom: 10px;
+}
+
+p, .poema {
+  font-size: clamp(1.2rem, 2.5vw, 1.5em);
+  margin-bottom: 30px;
+  color: var(--rosa-escuro);
+}
+
+.hearts {
+  font-size: 2em;
+  color: var(--rosa-médio);
+  animation: pulse 1.5s infinite;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 0.8em 2em;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.simBtn {
+  background-color: var(--rosa-claro);
+  color: white;
+}
+
+#naoBtn {
+  background-color: #cccccc;
+  color: #333333;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+
+.poema {
+  margin-top: 40px;
+  line-height: 1.6;
+  z-index: 1;
+}
+
+/* 🌚 Tema escuro */
+body[data-tema="escuro"] {
+  background-color: #1e1e1e;
+  color:#1e1e1e
+}
+.balao-coracao {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff4d88;
+  transform: rotate(-45deg);
+  animation: subirBalao 6s ease-in-out infinite;
+  opacity: 0.7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 50% 50% 0 0;
+}
+
+.balao-coracao::before,
+.balao-coracao::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ff4d88;
+  border-radius: 50%;
+}
+
+.balao-coracao::before {
+  top: -25px;
+  left: 0;
+}
+
+.balao-coracao::after {
+  top: 0;
+  left: 25px;
+}
+
+@keyframes subirBalao {
+  0%   { transform: translateY(0) rotate(-45deg); opacity: 0.7; }
+  50%  { transform: translateY(-20px) rotate(-45deg); opacity: 0.9; }
+  100% { transform: translateY(0) rotate(-45deg); opacity: 0.7; }
+}
+@keyframes balancar {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(8deg); }
+  60% { transform: rotate(-6deg); }
+  80% { transform: rotate(6deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.balancando {
+  animation: balancar 0.5s ease;
+}
+
+

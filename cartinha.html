@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Cartinha 💌</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+ body {
+  margin: 0;
+  padding: 0;
+  background-image: url('fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Great Vibes', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+    url('fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image:
+  radial-gradient(circle at center, rgba(255,255,255,0.35), rgba(255,255,255,0.05)),
+  url('fundo.png');
+
+}
+
+
+.pergaminho {
+
+  background: rgba(255, 250, 240, 0.95);
+  padding: 30px 40px;
+  border-radius: 25px;
+  max-width: 520px;  /* ← Aumentado aqui */
+  width: 92%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+  position: relative;
+  animation: aparecerFofo 1.5s ease;
+  text-align: center;
+  font-size: 1.3em;
+  color: #8b4a5a;
+  line-height: 1.6;
+  border: 2px dashed #ff99bb;
+  box-sizing: border-box;
+}
+
+
+
+
+.pergaminho::before {
+  content: '💌';
+  font-size: 2em;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffe6f1;
+  padding: 4px 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+.assinatura {
+  margin-top: 40px;
+  font-size: 1.1em;
+  color: #a05268;
+}
+
+@keyframes aparecerFofo {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  
+}
+@media (max-width: 400px) {
+  .pergaminho {
+    font-size: 1.05em;
+    padding: 15px 20px;
+    border-radius: 16px;
+  }
+
+  .pergaminho::before {
+    font-size: 1.5em;
+    top: -18px;
+  }
+}
+
+
+  .pergaminho::before {
+    font-size: 2em;
+    top: -18px;
+  }
+
+
+</style>
+
+</head>
+<body>
+
+  <div class="pergaminho">
+  <p>Desde criança, algo em você me fazia sorrir sem motivo. E mesmo sem entender o que era aquilo, eu sabia que era especial.</p>
+
+  <p>O tempo passou, a vida levou a gente por caminhos diferentes… mas a verdade é que, mesmo distante, algo em mim nunca deixou de te procurar nos outros.</p>
+
+  <p>Quando te reencontrei, percebi que aquele sentimento — aquela sensação de paixão — nunca foi embora. Ela só estava mimindo, esperando a hora certa.</p>
+
+  <p>Seus olhos ainda me dizem tudo sem precisar dizer nada. Seu sorriso continua parando o mundo ao meu redor. E seu jeito... ah, seu jeito ainda mexe com tudo aqui dentro.</p>
+  <p>Hoje eu sei: o amor da minha vida cresceu comigo, se afastou, e voltou mais bonito do que nunca. Porque eu sempre soube que era você. Sempre foi você.</p>
+
+  <div class="assinatura">
+    Com carinho de quem te carrega no coração há muito muito tempo,<br>
+    <strong>Rafael</strong>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quer Namorar Comigo?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body data-tema="claro">
+  <button id="botaoTema" onclick="alternarTema()">🌙 Alternar Tema</button>
+  <canvas id="chuvaCoracoesCanvas"></canvas>
+
+  <!-- Balões vetoriais flutuantes -->
+  <div class="baloes-suaves">
+    <!-- Os balões serão desenhados no canvas automaticamente -->
+  </div>
+
+  <audio autoplay loop>
+    <source src="musica-romantica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <div class="hearts">💖 💞 💖 💞 💖</div>
+  <h1>Oi, meu amor!</h1>
+  <p id="typing"></p>
+
+  <h1>💌 Quer namorar comigo? 💌</h1>
+
+  <div class="botoes">
+    <button class="simBtn" onclick="abrirCartinha()">Sim, quero! 💘</button>
+    <button id="naoBtn" onclick="diminuirBotao()">Não... 😢</button>
+  </div>
+
+  <div class="hearts" style="margin-top: 40px;">💖 💞 💖 💞 💖</div>
+  <div class="poema">
+    <p>Se amar é sonhar, eu vivo dormindo<br>
+       Com você, até o silêncio tem significado.<br>
+ 💕</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
